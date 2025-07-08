@@ -38,7 +38,6 @@ perfect-numbers/
 - **Gin Framework** - Framework web HTTP
 - **Docker** - Containerização
 - **Docker Compose** - Orquestração
-- **Nginx** - Proxy reverso (opcional)
 - **Testify** - Framework de testes
 
 ## 📋 Pré-requisitos
@@ -112,7 +111,6 @@ make help          # Mostrar todos os comandos
 ### Base URL
 - **Desenvolvimento**: `http://localhost:8080`
 - **Com Docker**: `http://localhost:8080`
-- **Com Nginx**: `http://localhost:80`
 
 ### Endpoints Disponíveis
 
@@ -287,7 +285,6 @@ Multi-stage build otimizado:
 
 Inclui:
 - **API**: Aplicação principal
-- **Nginx**: Proxy reverso com rate limiting
 - **Networks**: Rede isolada
 - **Health checks**: Monitoramento automático
 
