@@ -100,12 +100,6 @@ docker-stop: ## Stop Docker container
 	-docker rm $(DOCKER_CONTAINER)
 	@echo "$(GREEN)Container stopped!$(NC)"
 
-docker-clean: docker-stop ## Clean Docker images and containers
-	@echo "$(YELLOW)Cleaning Docker images...$(NC)"
-	-docker rmi $(DOCKER_IMAGE)
-	-docker system prune -f
-	@echo "$(GREEN)Docker cleanup completed!$(NC)"
-
 docker-logs: ## Show Docker container logs
 	docker logs -f $(DOCKER_CONTAINER)
 
@@ -125,7 +119,7 @@ compose-logs: ## Show docker-compose logs
 
 compose-build: ## Build and start services with docker-compose
 	@echo "$(YELLOW)Building and starting services...$(NC)"
-	docker-compose up --build -d
+	docker compose up --build -d
 	@echo "$(GREEN)Services built and started!$(NC)"
 
 # Development workflow
